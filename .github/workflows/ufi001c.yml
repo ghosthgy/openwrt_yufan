@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 001c
+name: ufi001c
 
 on:
   repository_dispatch:
