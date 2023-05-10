@@ -72,12 +72,12 @@ jobs:
         #git clone https://github.com/yufan666/openwrt-packages.git
         #git clone https://github.com/yufan666/small.git
     - name: Update feeds
-      run: cd openwrt 
-      #&& ./scripts/feeds update -a
+      run: ls
+      #cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt 
-      #&& ./scripts/feeds install -a
+      run: ls
+      #cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
