@@ -65,12 +65,10 @@ jobs:
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        #chmod +x $DIY_P1_SH
-        #cd openwrt
-        #$GITHUB_WORKSPACE/$DIY_P1_SH
-        #cd package
-        #git clone https://github.com/yufan666/openwrt-packages.git
-        #git clone https://github.com/yufan666/small.git
+        chmod +x $DIY_P1_SH
+        cd openwrt
+        $GITHUB_WORKSPACE/$DIY_P1_SH
+        
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
